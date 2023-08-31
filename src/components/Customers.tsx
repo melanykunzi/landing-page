@@ -25,7 +25,6 @@ const Text = styled.p`
 `
 
 function Customers() {
-
   return (
     <Container>
       <Titulo>Trusted by Thousands of<br />Happy Customer</Titulo>

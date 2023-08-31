@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-interface Testimonial {
+type Testimonial = {
   avatar: string;
   fullName: string;
   testimonial: string;
 }
 
-interface TestimonialCardProps {
+type TestimonialCardProps = {
   testimonial: Testimonial;
 }
 

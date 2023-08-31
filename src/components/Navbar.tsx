@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 import Button from './ButtonOne';
 
-interface BurgerProps {
+type BurgerProps = {
   isOpen: boolean;
 }
-interface NavListProps {
+type NavListProps = {
     isOpen: boolean;
 }
 const Nav = styled.nav`
@@ -75,7 +75,7 @@ const NavLink = styled.a`
   text-decoration: none;
 
   &:hover {
-    color: #ccc;
+    color: #f53838;
   }
 `;
 const Signbutton = styled.p`
@@ -123,7 +123,7 @@ const Logobold = styled.span`
     font-weight: bold;
     color: #0B132A;
 `
-const Navbar: React.FC = () => {
+function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNavbar = () => {
@@ -132,38 +132,38 @@ const Navbar: React.FC = () => {
 
   return (
     <Nav>
-        <Logo>
-            <LogoImg src="./img/logo.png" alt="" /> 
-            <LogoText>Lasles<Logobold>VPN</Logobold></LogoText>
-        </Logo>
-        <Toggle onClick={toggleNavbar}>
-            <Burger isOpen={isOpen} />
-        </Toggle>
-        <NavList isOpen={isOpen}>
-            <NavItems>
-                <NavItem>
-                    <NavLink href="#">About</NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink href="#">Features</NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink href="#">Pricing</NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink href="#">Testimonials</NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink href="#">Help</NavLink>
-                </NavItem>
-            </NavItems>
-            <Buttons>
-                <Signbutton>Sign In</Signbutton>
-                <Button text='Sign Up'></Button>
-            </Buttons>
+      <Logo>
+        <LogoImg src="./img/logo.png" alt="" /> 
+        <LogoText>Lasles<Logobold>VPN</Logobold></LogoText>
+      </Logo>
+      <Toggle onClick={toggleNavbar}>
+        <Burger isOpen={isOpen} />
+      </Toggle>
+      <NavList isOpen={isOpen}>
+        <NavItems>
+          <NavItem>
+            <NavLink href="#">About</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="#">Features</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="#">Pricing</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="#">Testimonials</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="#">Help</NavLink>
+          </NavItem>
+        </NavItems>
+        <Buttons>
+          <Signbutton>Sign In</Signbutton>
+          <Button text='Sign Up'></Button>
+        </Buttons>
       </NavList>
     </Nav>
   );
-};
+}
 
 export default Navbar;

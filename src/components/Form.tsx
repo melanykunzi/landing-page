@@ -112,7 +112,6 @@ function Forms() {
         },
         body: JSON.stringify(data),
       });
-  
       if (response.ok) {
         console.log('Data sent successfully to the backend');
         reset();

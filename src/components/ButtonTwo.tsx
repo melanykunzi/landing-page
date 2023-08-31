@@ -11,7 +11,7 @@ const Boton = styled.button`
   font-size: 16px;
   transition: background-color 0.3s;
   cursor: pointer;
-  box-shadow: 0px 20px 50px rgba(245, 56, 56, 0.4); /* Valor de sombra: desplazamiento en X, desplazamiento en Y, difuminado, color */
+  box-shadow: 0px 20px 50px rgba(245, 56, 56, 0.4);
   &:hover {
     background-color: #ffffff;
     color: #F53838;

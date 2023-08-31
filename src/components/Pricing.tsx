@@ -34,7 +34,7 @@ const Boxes = styled.div`
       flex-direction: column;
     }
 `
-interface Plan {
+type Plan = {
     title: string;
     price: string;
     benefits: string[];
@@ -42,20 +42,20 @@ interface Plan {
     type: string;
 }
 function Pricing() { 
-    const [plans, setPlans] = useState<Plan[]>([]);
 
-    useEffect(() => {
-      const apiUrl = 'https://6xrb5goi1l.execute-api.us-east-1.amazonaws.com/api/subscription';
-  
-      fetch(apiUrl)
-        .then(response => response.json())
-        .then(data => {
-          setPlans(data);
-        })
-        .catch(error => {
-          console.error('Error al obtener los datos:', error);
-        });
-    }, []);
+  const [plans, setPlans] = useState<Plan[]>([]);
+
+  useEffect(() => {
+    fetch('https://6xrb5goi1l.execute-api.us-east-1.amazonaws.com/api/subscription')
+      .then(response => response.json())
+      .then(data => {
+        setPlans(data);
+      })
+      .catch(error => {
+        console.error('Error al obtener los datos:', error);
+      });
+  }, []);
+
   return (
     <>
         <Container>

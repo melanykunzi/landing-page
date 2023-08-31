@@ -1,6 +1,6 @@
 import './App.css'
-import About from './components/About'
 import styled from 'styled-components'
+import About from './components/About'
 import Bar from './components/Bar'
 import Features from './components/Features'
 import Pricing from './components/Pricing'
